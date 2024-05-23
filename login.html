@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Login Here!</title>
+  <link rel="stylesheet" href="login.css">
+  <form class="box" id="loginForm">
+    <h1>Login</h1>
+    <input type="text" id="email" name="email" placeholder="Email" required>
+    <input type="password" id="password" name="password" placeholder="Password" required>
+    <input type="submit" value="Login">
+    <div class="feedback" id="feedback"></div>
+  </form>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var feedback = document.getElementById("feedback");
+        
+        // Clear previous feedback
+        feedback.textContent = "";
+
+        // Simple validation logic
+        if (email === "user@example.com" && password === "password") {
+            window.location.href ="dashboard.html"; // Replace with your desired link
+        } else {
+          window.location.href ="dashboard.html"; // Replace with your desired link
+        } 
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", handleLoginClick);
+</script>
+</body>
+</html>
